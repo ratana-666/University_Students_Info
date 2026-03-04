@@ -70,7 +70,7 @@ public class University {
     // Default Admin
     private void seedDefaultAdmin() {
         Admin admin = new Admin("A001", "Admin User", "012345678", 
-                                           "admin", "1234", "Administrator");
+                                           "admin", "1234");
         persons.add(admin);
     }
 
@@ -182,7 +182,7 @@ public class University {
         }
 
         persons.add(new Professor(professorId, fullName, phone, username, 
-                                       password, "Professor", department));
+                                       password, department));
         setLastMessage("Professor created successfully.");
     }
 

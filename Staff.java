@@ -1,7 +1,7 @@
 // File: Staff.java
 // Base class for inheritance - can be extended by other classes
 
-public class Staff {
+public class Staff implements IPerson{
     
     // ====== Fields (Encapsulation) ======
     private String staffId;
@@ -33,6 +33,14 @@ public class Staff {
     public String getUsername() { return username; }
     public String getPosition() { return position; }
     public boolean isActive() { return active; }
+    @Override
+    public String getRole() { 
+        return getPosition(); 
+    }
+    @Override
+    public String getId() {
+        return getStaffId();
+    }
     
     // For login check
     public boolean checkPassword(String input) {
